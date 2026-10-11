@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffd6e4">
+  <title>Hai !! Dari Zamir</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="layar-awal" class="layar-awal" hidden>
+    <div class="isi-awal">
+      <p class="pembuka">Special quick summary</p>
+      <h2 id="awal-judul">for u</h2>
+      <button id="tombol-buka" type="button" class="tombol">Buka Dong</button>
+      <p id="awal-info" class="awal-info"></p>
+    </div>
+  </div>
+
+  <button id="tombol-lagu" class="tombol-lagu" type="button" aria-pressed="false" aria-label="Putar lagu" hidden>
+    <span class="bar-lagu" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span id="label-lagu">Putar lagu</span>
+  </button>
+  <audio id="lagu" preload="metadata" loop></audio>
+
+  <header class="hero">
+    <canvas id="langit" aria-hidden="true"></canvas>
+    <div class="hero-teks">
+      <p class="pembuka">Roses are red, the sky is blue,</p>
+      <h1>Here is a special message, just for you.<span id="nama">kamu</span></h1>
+      <p class="sub">Ini halaman kecil tentang Someone yang besar artinya buatku.</p>
+    </div>
+    <div id="galeri" class="galeri" aria-label="Foto Jihan"></div>
+    <a class="turun" href="#alasan">baca loh ya,jangan cuma di scroll</a>
+  </header>
+
+    <dialog id="perbesar" class="perbesar">
+      <figure>
+        <img id="perbesar-img" alt="">
+        <figcaption id="perbesar-cap"></figcaption>
+      </figure>
+      <button id="tutup" type="button">Tutup</button>
+    </dialog>
+
+  <main>
+    <section id="alasan" class="blok">
+      <h2>Kenapa kamu spesial</h2>
+      <p class="petunjuk">Ketuk satu per satu.</p>
+      <ul id="daftar-alasan" class="alasan"></ul>
+    </section>
+
+
+    <section class="blok tengah">
+      <h2>Seberapa spesial kamu?</h2>
+      <p class="petunjuk">Biar alat ukurku yang jawab.</p>
+      <div id="meter" class="meter" role="progressbar" aria-label="Tingkat spesial" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div id="isi-meter" class="isi-meter"></div>
+      </div>
+      <p id="meter-angka" class="meter-angka">0%</p>
+      <button id="tombol-meter" type="button" class="tombol">Ukur sekarang</button>
+      <p id="meter-teks" class="teks-lucu" aria-live="polite"></p>
+    </section>
+
+    <section class="blok tengah">
+      <h2>Mesin gacha cinta</h2>
+      <p class="petunjuk">Putar tuasnya, siapa tahu dapat hadiah spesial.</p>
+      <div id="gacha" class="gacha">
+        <div id="kaca" class="kaca" aria-hidden="true"></div>
+        <div class="badan">
+          <button id="tombol-putar" type="button" class="tuas" aria-label="Putar tuas gacha"><span class="knob">PUTAR</span></button>
+          <span class="emblem" aria-hidden="true">&#9829;</span>
+          <div class="lubang" aria-hidden="true"></div>
+        </div>
+      </div>
+      <p id="gacha-teks" class="teks-lucu" aria-live="polite"></p>
+      <p id="gacha-koleksi" class="koleksi"></p>
+    </section>
+
+    <section class="blok surat-blok">
+      <h2>Yang belum sempat kubilang langsung</h2>
+      <article id="surat" class="surat"></article>
+      <p id="hitung" class="hitung" hidden></p>
+    </section>
+
+    <section class="blok tengah">
+      <h2>Kalau lagi butuh semangat</h2>
+      <p class="petunjuk">Satu ketukan, satu pesan dariku.</p>
+      <button id="tombol-pesan" type="button" class="tombol">Buka pesan dariku</button>
+      <p id="pesan-teks" class="teks-lucu" aria-live="polite"></p>
+    </section>
+
+    <section class="blok tengah">
+      <h2>Big hug for us!</h2>
+      <p class="petunjuk">Karena aku belum bisa peluk langsung. Ketuk hatinya.</p>
+      <button id="tombol-peluk" type="button" class="hati-besar" aria-label="Kirim peluk">&#9829;</button>
+      <p id="peluk-hitung" class="meter-angka">0 pelukan</p>
+      <p id="peluk-teks" class="teks-lucu" aria-live="polite"></p>
+    </section>
+
+    <section class="blok janji-blok">
+      <h2>Suatu hari nanti</h2>
+      <canvas id="hati" width="600" height="520" aria-label="Rasi bintang berbentuk hati"></canvas>
+      <button id="tombol-janji" type="button">Aku percaya hari itu akan datang</button>
+      <p id="janji-teks" class="janji-teks" aria-live="polite"></p>
+    </section>
+    <section class="blok tengah">
+      <h2>Tangkap hatiku</h2>
+      <p id="game-petunjuk" class="petunjuk"></p>
+      <div id="arena" class="arena" aria-label="Arena permainan tangkap hati"></div>
+      <p id="skor" class="meter-angka">0 / 10</p>
+      <button id="tombol-main" type="button" class="tombol">Mulai main</button>
+      <p id="game-teks" class="teks-lucu" aria-live="polite"></p>
+    </section>
+
+    <section class="blok tengah">
+      <h2>Mesin ramal cinta</h2>
+      <p class="petunjuk">Hasilnya ilmiah. Mungkin.</p>
+      <p id="ramal-pasangan" class="pasangan"></p>
+      <p id="ramal-angka" class="meter-angka">?%</p>
+      <button id="tombol-ramal" type="button" class="tombol">Ramal kita</button>
+      <p id="ramal-teks" class="teks-lucu" aria-live="polite"></p>
+    </section>
+
+    <section class="blok tengah tanya-blok">
+      <h2>Satu pertanyaan kecil</h2>
+      <p id="pertanyaan" class="pertanyaan"></p>
+      <div id="area-tanya" class="area-tanya">
+        <button id="btn-ya" type="button" class="tombol"></button>
+        <button id="btn-tidak" type="button" class="tombol tombol-pucat"></button>
+      </div>
+      <p id="jawaban" class="teks-lucu" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Dibuat dengan sabar, oleh seseorang yang menunggu dengan tulus.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
